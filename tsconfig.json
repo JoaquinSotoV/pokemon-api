@@ -10,7 +10,10 @@
     "synchronousWatchDirectory": true,
     // Finally, two additional settings for reducing the amount of possible
     // files to track  work from these directories
-    "excludeDirectories": ["**/node_modules", "dist"]
+    "excludeDirectories": [
+      "**/node_modules",
+      "dist"
+    ]
   },
   "compilerOptions": {
     "module": "commonjs",
@@ -29,6 +32,27 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
+    "rootDirs": [
+      "src",
+    ],
+    "paths": {
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@modules/*": [
+        "src/modules/*"
+      ],
+      "@exceptions/*": [
+        "src/exceptions/*"
+      ],
+      "@schemas/*": [
+        "src/schemas/*"
+      ],
+      "@dtos/*": [
+        "src/dtos/*"
+      ],
+    }
   }
 }
