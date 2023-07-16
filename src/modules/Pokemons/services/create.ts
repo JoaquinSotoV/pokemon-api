@@ -1,4 +1,4 @@
-import { CreatePokemonDto, CreatePokemonsDto } from "@dtos/pokemons.dto"
+import { CreatePokemonDto, CreatePokemonsDto } from "@dtos/pokemons/pokemons.dto"
 import { PokemonsService } from "../pokemons.service"
 import { PokemonDocument } from "@schemas/pokemon.schema"
 

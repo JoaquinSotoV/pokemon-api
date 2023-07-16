@@ -7,10 +7,10 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe(
     {
       enableDebugMessages: true,
-      exceptionFactory: (validationErrors: ValidationError[] = []) => {
-        console.error(JSON.stringify(validationErrors));
-        return new BadRequestException(validationErrors);
-      }
+      // exceptionFactory: (validationErrors: ValidationError[] = []) => {
+      //   console.error(JSON.stringify(validationErrors));
+      //   return new BadRequestException(validationErrors);
+      // }
     }
   ))
   await app.listen(3000)
