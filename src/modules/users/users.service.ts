@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common'
 import { InjectModel } from '@nestjs/mongoose'
 import { Model } from 'mongoose'
 import { User, UserDocument } from '@schemas/user.schema'
-import { findAll, create } from '@modules/users/services'
+import { findAll, create, findOne, findByName } from '@modules/users/services'
 
 @Injectable()
 export class UsersService {
@@ -11,4 +11,8 @@ export class UsersService {
   findAll = findAll.bind(this)
 
   create = create.bind(this)
+
+  findOne = findOne.bind(this)
+
+  findByName = findByName.bind(this)
 }

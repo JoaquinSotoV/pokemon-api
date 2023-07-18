@@ -1,3 +1,4 @@
+import 'dotenv/config.js'
 import { NestFactory } from '@nestjs/core'
 import { AppModule } from './modules/app.module'
 import { BadRequestException, ValidationError, ValidationPipe } from '@nestjs/common'

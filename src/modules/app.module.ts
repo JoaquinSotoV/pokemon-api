@@ -1,15 +1,24 @@
 import { Module } from '@nestjs/common'
 import { MongooseModule } from '@nestjs/mongoose'
-import { ConfigModule } from '@nestjs/config'
-import { PokemonsModule } from './Pokemons/pokemons.module'
+import { PokemonsModule } from './pokemons/pokemons.module'
 import { UsersModule } from './users/users.module'
+import { AuthModule } from './auth/auth.module'
+import config from '@config/env/common'
+import { APP_GUARD } from '@nestjs/core'
+import { AuthGuard } from './auth/auth.guard'
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.DATABASE ?? ''),
+    MongooseModule.forRoot(config.DATABASE ?? ''),
     PokemonsModule,
     UsersModule,
+    AuthModule
+  ],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: AuthGuard
+    }
   ]
 })
 export class AppModule {}

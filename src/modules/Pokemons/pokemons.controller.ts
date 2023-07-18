@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common'
 import { PokemonsService } from './pokemons.service'
 import { PokemonDocument } from '@schemas/pokemon.schema'
 import { CreatePokemonsDto } from '@dtos/pokemons/pokemons.dto'
+import { Public } from '@modules/auth/services/decorators/public.decorator'
 
 @Controller('pokemons')
 export class PokemonsController {

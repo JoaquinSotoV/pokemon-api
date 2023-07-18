@@ -1,4 +1,4 @@
-import { PokemonNotFoundException } from "@exceptions/Pokemons/pokemons.exception";
+import { PokemonNotFoundException } from "@exceptions/pokemons/pokemons.exception";
 import { PokemonsService } from "../pokemons.service";
 import { PokemonDocument } from "@schemas/pokemon.schema";
 

@@ -53,6 +53,9 @@
       "@dtos/*": [
         "src/dtos/*"
       ],
+      "@config/*": [
+        "src/config/*"
+      ],
     }
   }
 }

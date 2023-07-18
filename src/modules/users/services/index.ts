@@ -1,5 +1,6 @@
 export * from './create'
 export * from './findAll'
-// export * from './findOne'
+export * from './findOne'
+export * from './findByName'
 // export * from './remove'
 // export * from './update'
